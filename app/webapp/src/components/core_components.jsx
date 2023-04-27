@@ -7,7 +7,8 @@
  */
 
 import React from "react";
-
+import PaginatedContent from "./paginated-content.jsx";
+import { PaginableContextProvider } from "./paginable/paginable-context.jsx";
 function OnboardingComponent({ onSubmit }) {
   return (
     <div>
@@ -62,12 +63,13 @@ function Directions({ children }) {
 
 function SimpleFrontend({ taskData, isOnboarding, onSubmit, onError }) {
   return (
-    <div style={{ padding: "50px" }}>
-      <button className="btn btn-outline">Button</button>
-      <button className="btn btn-outline btn-primary">Button</button>
-      <button className="btn btn-outline btn-secondary">Button</button>
-      <button className="btn btn-outline btn-accent">Button</button>
-      This is some text.
+
+    <div className="App container mx-auto my-4 px-4 pt-4">
+        <PaginableContextProvider>  
+          <PaginatedContent taskData={taskData} submit={onSubmit} />
+        </PaginableContextProvider>
+
+      {/*  */}
     </div>
   );
 }
