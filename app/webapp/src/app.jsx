@@ -51,12 +51,11 @@ function MainApp() {
     return (
       <section className="hero is-medium is-link">
         <div className="hero-body">
-          <div className="title is-3">Pick up similar entities</div>
+          <div className="title is-3">Voting task</div>
           <div className="subtitle is-4">
             <p>
-              You will be asked to pick up similar entities or the entities of
-              the <b>same class</b>. Please read the detailed instructions and
-              make the selection by clicking on the entities.
+              Anwser questions and evaluate political statements. Please read the detailed instructions and
+              complete the task.
             </p>
             <p>
               We are conducting an academic study about Machine Learning and
