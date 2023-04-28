@@ -54,7 +54,7 @@ function MainApp() {
           <div className="title is-3">Voting task</div>
           <div className="subtitle is-4">
             <p>
-              Anwser questions and evaluate political statements. Please read the detailed instructions and
+              Answer questions and evaluate political statements. Please read the detailed instructions and
               complete the task.
             </p>
             <p>
