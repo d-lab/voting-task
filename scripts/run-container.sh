@@ -11,9 +11,9 @@ docker run -d --rm --init -v $APP_NAME-volume:/mephisto/data \
     -e APP_ENV=$APP_ENV \
     $APP_NAME;
     
-timeout 1800 \
+timeout 1800s \
     sh -c "while ! docker logs -f $(docker ps -q --filter ancestor=$APP_NAME --format="{{.ID}}")| grep -q '$M_TURK_PREVIEW_URL_PREFIX'; \
             do sleep 1; done";
 
 
-docker logs --tail=10 $(docker ps -q --filter ancestor=$APP_NAME --format="{{.ID}}");
+docker logs $(docker ps -q --filter ancestor=$APP_NAME --format="{{.ID}}");
